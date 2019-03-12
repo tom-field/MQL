@@ -1,0 +1,12 @@
+.idea
+*.ex5
+/Experts/Advisors
+Files
+Images
+Indicators
+Logs
+Profiles
+experts.dat
+mql5.content
+mql5.index
+mql5.index.backup
