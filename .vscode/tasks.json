@@ -15,6 +15,22 @@
                 "showReuseMessage": false
             }
         },
+        {
+            "label": "Compile-MQL",
+            "type": "shell",
+            "command": "C:\\Users\\Administrator\\AppData\\Roaming\\MetaQuotes\\Terminal\\CBC8DFF7ADDF88B265F53BA4FA1DFEE3\\MQL5\\Compile-MQL.ps1 ${file}",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
         {   //set the label ID for the MQL5 Reference context-sensitive help to be launched
             "label": "launch_offline_help",
             "type": "shell",
