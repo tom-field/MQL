@@ -1,5 +1,7 @@
 .idea
 *.ex5
+*.ipch
+*.bin
 /Experts/Advisors
 Files
 Images
