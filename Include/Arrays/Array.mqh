@@ -26,7 +26,7 @@ public:
    int               Total(void) const { return(m_data_total); }
    int               Available(void) const { return(m_data_max-m_data_total); }
    int               Max(void) const { return(m_data_max); }
-    
+   bool              IsSorted(const int mode=0) const { return(m_sort_mode==mode); }
    int               SortMode(void) const { return(m_sort_mode); }
    //--- cleaning method
    void              Clear(void) { m_data_total=0; }
