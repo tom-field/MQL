@@ -17,6 +17,7 @@
         },
         {
             "label": "Compile-MQL",
+            
             "type": "shell",
             "command": "C:\\Users\\Administrator\\AppData\\Roaming\\MetaQuotes\\Terminal\\CBC8DFF7ADDF88B265F53BA4FA1DFEE3\\MQL5\\Compile-MQL.ps1 ${file}",
             "presentation": {

@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\\\Users\\Administrator\\AppData\\Roaming\\MetaQuotes\\Terminal\\CBC8DFF7ADDF88B265F53BA4FA1DFEE3\\MQL5\\Include"
+                "C:\\\\Users\\Administrator\\AppData\\Roaming\\MetaQuotes\\Terminal\\E6E3D0917DD641581E4779524EB3B1AA\\MQL5\\Include"
             ],
             "defines": [
                 "_DEBUG",

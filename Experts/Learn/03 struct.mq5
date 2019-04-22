@@ -21,7 +21,7 @@ int OnInit()
   {
 //---
    CustomMqlTick ct1,ct2;
-   ct1.open = 1;
+   ct1.open = 1; fdas
    ct2.open = 2;
    printf(ct1.open);
 //---
