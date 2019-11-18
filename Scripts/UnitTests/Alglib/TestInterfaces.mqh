@@ -313,8 +313,7 @@ CNDimensional_Hess1::~CNDimensional_Hess1(void)
 //| its derivatives df/d0 and df/dx1                                 |
 //| and its Hessian.                                                 |
 //+------------------------------------------------------------------+
-void CNDimensional_Hess1::Hess(double &x[],double &func,double &grad[],
-                               CMatrixDouble &hess,CObject &obj)
+void CNDimensional_Hess1::Hess(double &x[],double &func,double &grad[],CMatrixDouble &hess,CObject &obj)
   {
    func=100*MathPow(x[0]+3,4)+MathPow(x[1]-3,4);
    grad[0]=400*MathPow(x[0]+3,3);
@@ -354,8 +353,7 @@ CNDimensional_Hess2::~CNDimensional_Hess2(void)
 //| This callback calculates f(x0,x1)=(x0^2+1)^2 + (x1-1)^2          |
 //| its gradient and Hessian                                         |
 //+------------------------------------------------------------------+
-void CNDimensional_Hess2::Hess(double &x[],double &func,double &grad[],
-                               CMatrixDouble &hess,CObject &obj)
+void CNDimensional_Hess2::Hess(double &x[],double &func,double &grad[],CMatrixDouble &hess,CObject &obj)
   {
    func=MathPow(x[0]*x[0]+1,2)+MathPow(x[1]-1,2);
    grad[0]=4*(x[0]*x[0]+1)*x[0];
@@ -395,8 +393,7 @@ CNDimensional_Bad_Hess::~CNDimensional_Bad_Hess(void)
 //| This callback calculates 'bad' function, i.e. function with      |
 //| incorrectly calculated derivatives                               |
 //+------------------------------------------------------------------+
-void CNDimensional_Bad_Hess::Hess(double &x[],double &func,double &grad[],
-                                  CMatrixDouble &hess,CObject &obj)
+void CNDimensional_Bad_Hess::Hess(double &x[],double &func,double &grad[],CMatrixDouble &hess,CObject &obj)
   {
    func=100*MathPow(x[0]+3,4)+MathPow(x[1]-3,4);
    grad[0]=40*MathPow(x[0]+3,3);
@@ -627,8 +624,7 @@ CNDimensional_Bad_Jac::~CNDimensional_Bad_Jac(void)
 //| This callback calculates 'bad' function,                         |
 //| i.e. function with incorrectly calculated derivatives            |
 //+------------------------------------------------------------------+
-void CNDimensional_Bad_Jac::Jac(double &x[],double &fi[],CMatrixDouble &jac,
-                                CObject &obj)
+void CNDimensional_Bad_Jac::Jac(double &x[],double &fi[],CMatrixDouble &jac,CObject &obj)
   {
    fi[0]=10*MathPow(x[0]+3,2);
    fi[1]=MathPow(x[1]-3,2);
@@ -667,8 +663,7 @@ CNDimensional_CX_1_Func::~CNDimensional_CX_1_Func(void)
 //| This callback calculates f(c,x)=exp(-c0*sqr(x0)) where x is a    |
 //| position on X-axis and c is adjustable parameter                 |
 //+------------------------------------------------------------------+
-void CNDimensional_CX_1_Func::PFunc(double &c[],double &x[],double &func,
-                                    CObject &obj)
+void CNDimensional_CX_1_Func::PFunc(double &c[],double &x[],double &func,CObject &obj)
   {
    func=MathExp(-c[0]*x[0]*x[0]);
   }
@@ -702,8 +697,7 @@ CNDimensional_Debt_Func::~CNDimensional_Debt_Func(void)
 //| This callback calculates                                         |
 //| f(c,x)=c[0]*(1+c[1]*(pow(x[0]-1999,c[2])-1))                     |
 //+------------------------------------------------------------------+
-void CNDimensional_Debt_Func::PFunc(double &c[],double &x[],double &func,
-                                    CObject &obj)
+void CNDimensional_Debt_Func::PFunc(double &c[],double &x[],double &func,CObject &obj)
   {
    func=c[0]*(1+c[1]*(MathPow(x[0]-1999,c[2])-1));
   }
@@ -739,8 +733,7 @@ CNDimensional_CX_1_Grad::~CNDimensional_CX_1_Grad(void)
 //| parameter.                                                       |
 //| IMPORTANT: gradient is calculated with respect to C, not to X    |
 //+------------------------------------------------------------------+
-void CNDimensional_CX_1_Grad::PGrad(double &c[],double &x[],double &func,
-                                    double &grad[],CObject &obj)
+void CNDimensional_CX_1_Grad::PGrad(double &c[],double &x[],double &func,double &grad[],CObject &obj)
   {
    func=MathExp(-c[0]*MathPow(x[0],2));
    grad[0]=-MathPow(x[0],2)*func;
@@ -778,9 +771,7 @@ CNDimensional_CX_1_Hess::~CNDimensional_CX_1_Hess(void)
 //| IMPORTANT: gradient/Hessian are calculated with respect to C,    |
 //| not to X                                                         |
 //+------------------------------------------------------------------+
-void CNDimensional_CX_1_Hess::PHess(double &c[],double &x[],double &func,
-                                    double &grad[],CMatrixDouble &hess,
-                                    CObject &obj)
+void CNDimensional_CX_1_Hess::PHess(double &c[],double &x[],double &func,double &grad[],CMatrixDouble &hess,CObject &obj)
   {
    func=MathExp(-c[0]*MathPow(x[0],2));
    grad[0]=-MathPow(x[0],2)*func;
@@ -815,8 +806,7 @@ CNDimensional_ODE_Function_1_Dif::~CNDimensional_ODE_Function_1_Dif(void)
 //+------------------------------------------------------------------+
 //| This callback calculates f(y[],x)=-y[0]                          |
 //+------------------------------------------------------------------+
-CNDimensional_ODE_Function_1_Dif::ODE_RP(double &y[],double x,double &dy[],
-                                         CObject &obj)
+void CNDimensional_ODE_Function_1_Dif::ODE_RP(double &y[],double x,double &dy[],CObject &obj)
   {
    dy[0]=-y[0];
   }
@@ -849,8 +839,7 @@ CInt_Function_1_Func::~CInt_Function_1_Func(void)
 //+------------------------------------------------------------------+
 //| This callback calculates f(x)=exp(x)                             |
 //+------------------------------------------------------------------+
-void CInt_Function_1_Func::Int_Func(double x,double xminusa,double bminusx,
-                                    double &y,CObject &obj)
+void CInt_Function_1_Func::Int_Func(double x,double xminusa,double bminusx,double &y,CObject &obj)
   {
    y=MathExp(x);
   }

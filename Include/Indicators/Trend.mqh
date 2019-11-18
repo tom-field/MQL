@@ -311,9 +311,9 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiBands::CiBands(void) : m_ma_period(-1),
-                         m_ma_shift(-1),
-                         m_deviation(EMPTY_VALUE),
-                         m_applied(-1)
+   m_ma_shift(-1),
+   m_deviation(EMPTY_VALUE),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -354,7 +354,7 @@ bool CiBands::Create(const string symbol,const ENUM_TIMEFRAMES period,
 bool CiBands::Initialize(const string symbol,const ENUM_TIMEFRAMES period,const int num_params,const MqlParam &params[])
   {
    return(Initialize(symbol,period,(int)params[0].integer_value,(int)params[1].integer_value,
-          params[2].double_value,(int)params[3].integer_value));
+                     params[2].double_value,(int)params[3].integer_value));
   }
 //+------------------------------------------------------------------+
 //| Initialize indicator with the special parameters                 |
@@ -468,10 +468,10 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiEnvelopes::CiEnvelopes(void) : m_ma_period(-1),
-                                 m_ma_shift(-1),
-                                 m_ma_method(WRONG_VALUE),
-                                 m_applied(-1),
-                                 m_deviation(EMPTY_VALUE)
+   m_ma_shift(-1),
+   m_ma_method(WRONG_VALUE),
+   m_applied(-1),
+   m_deviation(EMPTY_VALUE)
   {
   }
 //+------------------------------------------------------------------+
@@ -512,8 +512,8 @@ bool CiEnvelopes::Create(const string symbol,const ENUM_TIMEFRAMES period,
 bool CiEnvelopes::Initialize(const string symbol,const ENUM_TIMEFRAMES period,const int num_params,const MqlParam &params[])
   {
    return(Initialize(symbol,period,(int)params[0].integer_value,(int)params[1].integer_value,
-          (ENUM_MA_METHOD)params[2].integer_value,(int)params[3].integer_value,
-          (int)params[4].double_value));
+                     (ENUM_MA_METHOD)params[2].integer_value,(int)params[3].integer_value,
+                     (int)params[4].double_value));
   }
 //+------------------------------------------------------------------+
 //| Initialize indicator with the special parameters                 |
@@ -612,8 +612,8 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiIchimoku::CiIchimoku(void) : m_tenkan_sen(-1),
-                               m_kijun_sen(-1),
-                               m_senkou_span_b(-1)
+   m_kijun_sen(-1),
+   m_senkou_span_b(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -787,9 +787,9 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiMA::CiMA(void) : m_ma_period(-1),
-                   m_ma_shift(-1),
-                   m_ma_method(WRONG_VALUE),
-                   m_applied(-1)
+   m_ma_shift(-1),
+   m_ma_method(WRONG_VALUE),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -830,7 +830,7 @@ bool CiMA::Create(const string symbol,const ENUM_TIMEFRAMES period,
 bool CiMA::Initialize(const string symbol,const ENUM_TIMEFRAMES period,const int num_params,const MqlParam &params[])
   {
    return(Initialize(symbol,period,(int)params[0].integer_value,(int)params[1].integer_value,
-          (ENUM_MA_METHOD)params[2].integer_value,(int)params[3].integer_value));
+                     (ENUM_MA_METHOD)params[2].integer_value,(int)params[3].integer_value));
   }
 //+------------------------------------------------------------------+
 //| Initialize indicator with the special parameters                 |
@@ -906,7 +906,7 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiSAR::CiSAR(void) : m_step(EMPTY_VALUE),
-                     m_maximum(EMPTY_VALUE)
+   m_maximum(EMPTY_VALUE)
   {
   }
 //+------------------------------------------------------------------+
@@ -1021,9 +1021,9 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiStdDev::CiStdDev(void) : m_ma_period(-1),
-                           m_ma_shift(-1),
-                           m_ma_method(WRONG_VALUE),
-                           m_applied(-1)
+   m_ma_shift(-1),
+   m_ma_method(WRONG_VALUE),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -1064,7 +1064,7 @@ bool CiStdDev::Create(const string symbol,const ENUM_TIMEFRAMES period,
 bool CiStdDev::Initialize(const string symbol,const ENUM_TIMEFRAMES period,const int num_params,const MqlParam &params[])
   {
    return(Initialize(symbol,period,(int)params[0].integer_value,(int)params[1].integer_value,
-          (ENUM_MA_METHOD)params[2].integer_value,(int)params[3].integer_value));
+                     (ENUM_MA_METHOD)params[2].integer_value,(int)params[3].integer_value));
   }
 //+------------------------------------------------------------------+
 //| Initialize indicator with the special parameters                 |
@@ -1143,8 +1143,8 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiDEMA::CiDEMA(void) : m_ma_period(-1),
-                       m_ind_shift(-1),
-                       m_applied(-1)
+   m_ind_shift(-1),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -1260,8 +1260,8 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiTEMA::CiTEMA(void) : m_ma_period(-1),
-                       m_ind_shift(-1),
-                       m_applied(-1)
+   m_ind_shift(-1),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -1377,8 +1377,8 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiFrAMA::CiFrAMA(void) : m_ma_period(-1),
-                         m_ind_shift(-1),
-                         m_applied(-1)
+   m_ind_shift(-1),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -1499,10 +1499,10 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiAMA::CiAMA(void) : m_ma_period(-1),
-                     m_fast_ema_period(-1),
-                     m_slow_ema_period(-1),
-                     m_ind_shift(-1),
-                     m_applied(-1)
+   m_fast_ema_period(-1),
+   m_slow_ema_period(-1),
+   m_ind_shift(-1),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -1543,8 +1543,8 @@ bool CiAMA::Create(const string symbol,const ENUM_TIMEFRAMES period,
 bool CiAMA::Initialize(const string symbol,const ENUM_TIMEFRAMES period,const int num_params,const MqlParam &params[])
   {
    return(Initialize(symbol,period,(int)params[0].integer_value,(int)params[1].integer_value,
-          (int)params[2].integer_value,(int)params[3].integer_value,
-          (int)params[4].integer_value));
+                     (int)params[2].integer_value,(int)params[3].integer_value,
+                     (int)params[4].integer_value));
   }
 //+------------------------------------------------------------------+
 //| Initialize indicator with the special parameters                 |
@@ -1628,9 +1628,9 @@ protected:
 //| Constructor                                                      |
 //+------------------------------------------------------------------+
 CiVIDyA::CiVIDyA(void) : m_cmo_period(-1),
-                         m_ema_period(-1),
-                         m_ind_shift(-1),
-                         m_applied(-1)
+   m_ema_period(-1),
+   m_ind_shift(-1),
+   m_applied(-1)
   {
   }
 //+------------------------------------------------------------------+
@@ -1672,7 +1672,7 @@ bool CiVIDyA::Initialize(const string symbol,const ENUM_TIMEFRAMES period,const 
   {
 //---
    return(Initialize(symbol,period,(int)params[0].integer_value,(int)params[1].integer_value,
-          (int)params[2].integer_value,(int)params[3].integer_value));
+                     (int)params[2].integer_value,(int)params[3].integer_value));
   }
 //+------------------------------------------------------------------+
 //| Initialize indicator with the special parameters                 |
