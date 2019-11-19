@@ -4,6 +4,7 @@
 *.bin
 *.chr
 *.log
+*.ini
 /Experts/Advisors
 Files
 Images
